@@ -1,0 +1,54 @@
+.modal {
+  position: absolute;
+  width: 528px;
+  height: 581px;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+
+  opacity: 1;
+  transition: transform $transition-duration $timing-function,
+    opacity $transition-duration $timing-function;
+
+  background-color: #ffffff;
+
+  .backdrop.is-hidden & {
+    transform: translate(-50%, -50%) scale(0.2);
+    opacity: 0;
+  }
+  &__button--closes {
+    position: absolute;
+
+    @include flex-settings(flex, center, center);
+
+    top: 8px;
+    right: 8px;
+
+    width: 30px;
+    height: 30px;
+
+    margin: 0;
+    padding: 0;
+    
+    @include border (1px, rgba(0, 0, 0, 0.1));
+    border-radius: 50%;
+    background-color: #ffffff; 
+    cursor: pointer;
+  }
+
+  &__icon {
+    fill: #212121;
+    background-color: #ffffff;
+    transition: fill $transition-duration $timing-function;
+
+    .modal__button--closes:hover &,
+    .modal__button--closes:focus & {
+      fill: $аccent-color;
+    }
+  }
+}

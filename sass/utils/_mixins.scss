@@ -1,0 +1,22 @@
+
+// flex-box (display , justify-content, align-items)
+
+@mixin flex-settings($display, $justify-content, $align-items) {
+  display: $display;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
+
+// social-link-value 
+
+@mixin social-link-value($fill) {
+  fill: $fill;
+  transition: background-color $transition-duration $timing-function,
+    fill $transition-duration $timing-function;
+}
+
+// border (input, btn)
+
+@mixin border ($px, $color) {
+    border: $px solid $color;
+}

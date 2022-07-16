@@ -1,0 +1,32 @@
+.section-clients {
+  @extend %section;
+}
+
+.company-list {
+  display: flex;
+
+  &__item:not(:last-child) {
+    margin-right: 30px;
+  }
+
+  &__link {
+    @include flex-settings(flex, center, center);
+
+    width: 170px;
+    height: 92px;
+
+    
+    @include border (1px, #afb1b8);
+    border-radius: 4px;
+    fill: #afb1b8;
+
+    transition: fill $transition-duration $timing-function,
+      border $transition-duration $timing-function;
+
+    &:focus,
+    &:hover {
+      fill: $аccent-color;
+      @include border (1px, $аccent-color);
+    }
+  }
+}

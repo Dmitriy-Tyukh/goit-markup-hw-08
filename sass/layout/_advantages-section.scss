@@ -1,0 +1,29 @@
+
+.advantages-section {
+     @extend %section;
+}
+.advantages-list {
+        display: flex;
+      
+    &__item {
+    width: 270px;
+        &:not(:last-child) {
+            margin-right: 30px;
+        }
+    }
+    &__block {
+        @include flex-settings(flex, center, center);
+
+    height: 120px;
+    margin-bottom: 30px;
+    border-radius: 4px;
+    background-color: #f5f4fa;
+    }
+
+    &__title {
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    }
+}

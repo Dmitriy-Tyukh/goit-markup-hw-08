@@ -1,0 +1,12 @@
+
+.logo {
+  font-family: $f-family-logo;
+  font-weight: $f-weight-bolt;
+  font-size: 26px;
+  line-height: 1.19;
+  color: $аccent-color;
+
+    &__text {
+    color: $title-text-color;
+}
+}

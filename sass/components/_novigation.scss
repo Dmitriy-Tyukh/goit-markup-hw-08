@@ -1,0 +1,87 @@
+.nav {
+  @include flex-settings(flex, flex-start, center);
+}
+
+.site-nav {
+  @include flex-settings(flex, flex-start, center);
+
+  padding-left: 0;
+  margin-left: 93px;
+
+  &__item {
+    position: relative;
+    margin-left: 50px;
+  }
+  &__item:first-child {
+    margin-left: 0;
+  }
+
+  &__link {
+    display: block;
+    padding: 32px 0;
+    font-weight: $f-weight-medium;
+    line-height: 1.14;
+    color: $title-text-color;
+
+    transition: color $transition-duration $timing-function;
+  }
+  &__link:hover,
+  &__link:focus {
+    color: $аccent-color;
+  }
+
+  &__link--current {
+    color: $аccent-color;
+  }
+  &__link--current::after {
+    content: ' ';
+
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+
+    display: inline-block;
+
+    height: 4px;
+    width: 100%;
+    border-radius: 2px;
+    background-color: $аccent-color;
+  }
+}
+
+.auth-nav {
+  @include flex-settings(flex, flex-start, center);
+
+  padding-left: 0;
+  margin-left: auto;
+
+  &__item {
+    margin-left: 50px;
+  }
+  &__item:first-child {
+    margin-left: 0;
+  }
+
+  &__link {
+    display: inline-flex;
+    padding: 32px 0;
+    font-weight: $f-weight-medium;
+    line-height: 1.14;
+    color: $primary-text-color;
+
+    transition: color $transition-duration $timing-function;
+  }
+  &__link:hover,
+  &__link:focus {
+    color: $аccent-color;
+  }
+
+  &__icon-envelope {
+    fill: currentColor;
+    margin: 2px 10px 2px 0;
+  }
+  &__icon-smartphone {
+    fill: currentColor;
+    margin: 0 10px 0;
+  }
+}

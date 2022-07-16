@@ -1,0 +1,133 @@
+.form {
+  padding: 40px;
+
+  &__text {
+    font-weight: $f-weight-bolt;
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+
+    margin-bottom: 12px;
+
+    color: $title-text-color;
+  }
+
+  &__field {
+    position: relative;
+    margin-bottom: 10px;
+    &--moves {
+      margin-bottom: 20px;
+    }
+  }
+  &__input {
+    width: 100%;
+    padding: 11px 12px 11px 42px;
+
+    @include border (1px, $modal-inp-boder-color);
+    border-radius: 4px;
+
+    caret-color: currentcolor;
+    cursor: pointer;
+    outline: none;
+    transition: border $transition-duration $timing-function;
+
+    &--scales {
+      display: block;
+      resize: none;
+      height: 120px;
+      padding: 12px 16px;
+    }
+
+    &--scales::placeholder {
+      font-size: 12px;
+      line-height: 1.67;
+      letter-spacing: 0.01em;
+    }
+
+    .form__field:focus-within > & {
+        @include border (1px, $аccent-color); 
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    pointer-events: none;
+
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+
+    fill: #212121;
+    transition: fill $transition-duration $timing-function;
+
+    .form__field:focus-within > & {
+      fill: $аccent-color;
+    }
+  }
+
+  &__leble {
+    display: block;
+
+    margin-bottom: 4px;
+
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+  }
+}
+
+.policy {
+  @include flex-settings(flex, center, center);
+
+  margin-bottom: 30px;
+
+  &__lable {
+    position: relative;
+
+    @include flex-settings(flex, center, center);
+  }
+
+  &::before {
+    content: '';
+    display: block;
+
+    margin-right: 8px;
+
+    width: 16px;
+    height: 15px;
+
+    @include border (2px, #212121); 
+    border-radius: 2px;
+    background-color: #ffffff;
+  }
+
+  &__input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    position: absolute;
+  }
+
+  &__icon {
+    position: absolute;
+    top: 50%;
+    left: -24px;
+    transform: translateY(-50%);
+
+    opacity: 0;
+    transition: opacity $transition-duration $timing-function;
+
+    .policy__input:focus:checked + & {
+      opacity: 1;
+    }
+  }
+
+  &__link {
+    text-decoration: underline;
+    color: $аccent-color;
+  }
+}
+
+.modal__button {
+  @extend %button;
+}

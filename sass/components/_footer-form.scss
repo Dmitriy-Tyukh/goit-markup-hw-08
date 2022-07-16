@@ -1,0 +1,53 @@
+
+.form-footer {
+  @include flex-settings(flex, flex-start, flex-end);
+  
+  &__title {
+        font-weight: $f-weight-bolt;
+        font-size: 14px;
+        line-height: 1.14;
+
+        margin-right: 12px;
+
+        text-transform: uppercase;
+        color: #ffffff;
+    }
+
+    &__input {
+        @include flex-settings(flex, flex-start, center);
+
+        width: 358px;
+        padding: 15px;
+
+        margin-top: 20px;
+        font-size: 16px;
+        line-height: 1.25;
+
+        @include border (1px, $footer-inp-boder-color);
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+        border-radius: 4px;
+        cursor: pointer;
+
+        color: #ffffff;
+        background-color: $footer-backgraund-color;
+            
+            &::placeholder {
+                @include flex-settings(flex, flex-start, center);
+
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 1.25;
+
+                color: $footer-input-color;
+            }
+    }
+   
+    &__button {
+       @extend %button;
+    }
+
+    &__icon {
+    margin-left: 10px;
+    fill: #ffffff;
+    }
+}

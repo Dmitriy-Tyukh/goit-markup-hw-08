@@ -1,0 +1,23 @@
+
+.socials-list {
+  @include flex-settings(flex, center, center);
+
+    &__item {
+        @extend %social-link-value;
+
+            &:not(:last-child) {
+                margin-right: 10px;
+            }
+    }
+
+    &__link {
+        @include flex-settings(flex, center, center);
+        @include social-link-value(#afb1b8);
+        @extend %social-link-value;
+            
+            &:focus,
+            &:hover {
+                @extend %socials-icon-active;
+            }
+    }
+}
