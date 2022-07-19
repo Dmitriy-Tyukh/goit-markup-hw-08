@@ -4,17 +4,21 @@
 }
 
 .footer-link-group {
-  @include flex-settings(flex, flex-start, baseline);
+    text-align: center;
+//   @include flex-settings(flex, flex-start, baseline);
 }
 
 .first-column {
-  margin-right: 70px;
-  flex-direction: column;
-  min-width: 231px;
+    margin-bottom: 60px;
 
+//   flex-direction: column;
+//   min-width: 231px;
+//   margin-right: 70px;
   .logo--moves {
     display: block;
     margin-bottom: 20px;
+
+    padding: 0;
   }
   .logo__text--inverse {
     color: #ffffff;
@@ -39,12 +43,16 @@
   }
 
   &__item:not(:last-child) {
-    margin-bottom: 9px;
+    margin-bottom: 8px;
+
+    // margin-bottom: 9px;
   }
 }
 
 .second-column {
-  margin-right: 93px;
+    margin-bottom: 60px;
+
+//   margin-right: 93px;
 
   .column-title {
     display: block;
