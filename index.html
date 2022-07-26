@@ -130,24 +130,35 @@
                 <ul class="work-list">
                     <li class="work-list__item">
                         <div class="work-list__thumb">
-                            <img src="./images/work/img.jpg" alt="Печатает на клавиатуре" width="370" height="294"
-                                class="work-list__img" />
-                            <h3 class="work-list__title">Десктопные приложения</h3>
-                        </div>
-
-                    </li>
-                    <li class="work-list__item">
-                        <div class="work-list__thumb">
-                            <img src="./images/work/img-1.jpg" alt="Телефон и ноутбук" width="370" height="294"
-                                class="work-list__img" />
-                            <h3 class="work-list__title">Мобильные приложения</h3>
+                          <img class="work-list__img"
+                                srcset="./images/work/img-1-370.jpg 1x,
+                                        ./images/work/img-1-740.jpg 2x"
+                                src="./images/work/img-1-370.jpg" 
+                                alt="Десктопные приложения" 
+                                width="370" />
+                                    <h3 class="work-list__title">Десктопные приложения</h3>
                         </div>
                     </li>
                     <li class="work-list__item">
                         <div class="work-list__thumb">
-                            <img src="./images/work/img-2.jpg" alt="Планшет в руках" width="370" height="294"
-                                class="work-list__img" />
-                            <h3 class="work-list__title">Дизайнерские решения</h3>
+                            <img class="work-list__img" 
+                                srcset="./images/work/img-2-370.jpg 1x,
+                                        ./images/work/img-2-740.jpg 2x"
+                                src="./images/work/img-2-370.jpg" 
+                                alt="Мобильные приложения" 
+                                width="370" />
+                                    <h3 class="work-list__title">Мобильные приложения</h3>
+                        </div>
+                    </li>
+                    <li class="work-list__item">
+                        <div class="work-list__thumb">
+                            <img class="work-list__img"
+                                srcset="./images/work/img-3-370.jpg 1x,
+                                        ./images/work/img-3-740.jpg 2x"
+                                src="./images/work/img-3-370.jpg" 
+                                alt="Дизайнерские решени" 
+                                width="370" />
+                                    <h3 class="work-list__title">Дизайнерские решения</h3>
                         </div>
                     </li>
                 </ul>
@@ -161,16 +172,24 @@
                 <h2 class="section-title">Наша команда</h2>
 
                 <ul class="team-list">
-
                     <li class="team-list__item">
-                        <img class="team-list__img" src="./images/team/img-3.jpg" alt=" Первый член команды" width="270"
-                            height="260" />
+                        <picture>
+                            <source srcset="./images/team/img-1-270.webp 1x, ./images/team/img-1-540.webp 2x" media="(min-width: 1200px)" type="image/webp">
+                            <source srcset="./images/team/img-1-354.webp 1x, ./images/team/img-1-708.webp 2x" media="(min-width: 768px)" type="image/webp">
+                            <source srcset="./images/team/img-1-450.webp 1x, ./images/team/img-1-900.webp 2x" media="(min-width: 320px)" type="image/webp">
+                    
+                            <source srcset="./images/team/img-1-270.jpg 1x, ./images/team/img-1-540.jpg 2x" media="(min-width: 1200px)" >
+                            <source srcset="./images/team/img-1-354.jpg 1x, ./images/team/img-1-708.jpg 2x" media="(min-width: 768px)" >
+                            <source srcset="./images/team/img-1-450.jpg 1x, ./images/team/img-1-900.jpg 2x" media="(min-width: 320px)" >
+
+                            <img class="team-list__img" src="./images/team/img-1-354.jpg " alt=" Первый член команды" />
+                        </picture>
+
                         <div class="team-list__thumb">
                             <h3 class="team-list__title">Игорь Демьяненко</h3>
                             <p class="team-list__text">Product Designer</p>
 
                             <ul class="socials-list">
-
                                 <li class="socials-list__item">
                                     <a href="#" class="socials-list__link" aria-label="Инстаграм">
                                         <svg class="socials-list__icon" width="20" height="20">
@@ -200,14 +219,23 @@
                     </li>
 
                     <li class="team-list__item">
-                        <img class="team-list__img" src="./images/team/img-4.jpg" alt="Второй член команды" width="270"
-                            height="260" />
+                        <picture>
+                            <source srcset="./images/team/img-2-270.webp 1x, ./images/team/img-2-540.webp 2x" media="(min-width: 1200px)" type="image/webp">
+                            <source srcset="./images/team/img-2-354.webp 1x, ./images/team/img-2-708.webp 2x" media="(min-width: 768px)"  type="image/webp">
+                            <source srcset="./images/team/img-2-450.webp 1x, ./images/team/img-2-900.webp 2x" media="(min-width: 320px)"  type="image/webp">
+
+                            <source srcset="./images/team/img-2-270.jpg 1x, ./images/team/img-2-540.jpg 2x" media="(min-width: 1200px)">
+                            <source srcset="./images/team/img-2-354.jpg 1x, ./images/team/img-2-708.jpg 2x" media="(min-width: 768px)">
+                            <source srcset="./images/team/img-2-450.jpg 1x, ./images/team/img-2-900.jpg 2x" media="(min-width: 320px)">
+
+                            <img class="team-list__img" src="./images/team/img-2-354.jpg " alt=" Второй член команды" />
+                        </picture>
+
                         <div class="team-list__thumb">
                             <h3 class="team-list__title">Ольга Репина</h3>
                             <p class="team-list__text">Frontend Developer</p>
 
                             <ul class="socials-list">
-
                                 <li class="socials-list__item"><a href="#" class="socials-list__link"
                                         aria-label="Инстаграм">
                                         <svg class="socials-list__icon" width="20" height="20">
@@ -237,14 +265,26 @@
                     </li>
 
                     <li class="team-list__item">
-                        <img class="team-list__img" src="./images/team/img-5.jpg" alt="Третий член команды" width="270"
-                            height="260" />
+                        <picture>
+                            <source srcset="./images/team/img-3-270.webp 1x, ./images/team/img-3-540.webp 2x" media="(min-width: 1200px)"
+                                type="image/webp">
+                            <source srcset="./images/team/img-3-354.webp 1x, ./images/team/img-3-708.webp 2x" media="(min-width: 768px)"
+                                type="image/webp">
+                            <source srcset="./images/team/img-3-450.webp 1x, ./images/team/img-3-900.webp 2x" media="(min-width: 320px)"
+                                type="image/webp">
+
+                            <source srcset="./images/team/img-3-270.jpg 1x, ./images/team/img-3-540.jpg 2x" media="(min-width: 1200px)">
+                            <source srcset="./images/team/img-3-354.jpg 1x, ./images/team/img-3-708.jpg 2x" media="(min-width: 768px)">
+                            <source srcset="./images/team/img-3-450.jpg 1x, ./images/team/img-3-900.jpg 2x" media="(min-width: 320px)">
+
+                            <img class="team-list__img" src="./images/team/img-3-354.jpg " alt=" Третий член команды" />
+                        </picture>
+
                         <div class="team-list__thumb">
                             <h3 class="team-list__title">Николай Тарасов</h3>
                             <p class="team-list__text">Marketing</p>
 
                             <ul class="socials-list">
-
                                 <li class="socials-list__item"><a href="#" class="socials-list__link"
                                         aria-label="Инстаграм">
                                         <svg class="socials-list__icon" width="20" height="20">
@@ -274,14 +314,25 @@
                     </li>
 
                     <li class="team-list__item">
-                        <img class="team-list__img" src="./images/team/img-6.jpg" alt="Четвертый член команды"
-                            width="270" height="260" />
+                        <picture>
+                            <source srcset="./images/team/img-4-270.webp 1x, ./images/team/img-4-540.webp 2x" media="(min-width: 1200px)"
+                                type="image/webp">
+                            <source srcset="./images/team/img-4-354.webp 1x, ./images/team/img-4-708.webp 2x" media="(min-width: 768px)"
+                                type="image/webp">
+                            <source srcset="./images/team/img-4-450.webp 1x, ./images/team/img-4-900.webp 2x" media="(min-width: 320px)"
+                                type="image/webp">
+
+                            <source srcset="./images/team/img-4-270.jpg 1x, ./images/team/img-4-540.jpg 2x" media="(min-width: 1200px)">
+                            <source srcset="./images/team/img-4-354.jpg 1x, ./images/team/img-4-708.jpg 2x" media="(min-width: 768px)">
+                            <source srcset="./images/team/img-4-450.jpg 1x, ./images/team/img-4-900.jpg 2x" media="(min-width: 320px)">
+
+                            <img class="team-list__img" src="./images/team/img-4-354.jpg " alt=" Четвертый член команды" />
+                        </picture>
                         <div class="team-list__thumb">
                             <h3 class="team-list__title">Михаил Ермаков</h3>
                             <p class="team-list__text">UI Designer</p>
 
                             <ul class="socials-list">
-
                                 <li class="socials-list__item"><a href="#" class="socials-list__link"
                                         aria-label="Инстаграм">
                                         <svg class="socials-list__icon" width="20" height="20">

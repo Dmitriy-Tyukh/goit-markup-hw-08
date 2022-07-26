@@ -3,16 +3,10 @@
      @extend %section;
 }
 .advantages-list {
-     @media screen and (min-width: 768px) and (max-width: 1199px) {
-        flex-basis: calc((100% - 2*15px) / 2);
-        display: flex;
-        flex-wrap: wrap;
-        margin: -15px;
+    @include tablet {
+        @include list-settings(flex, wrap, -15px);
     }
-    @media screen and (min-width: 1200px) {
-        display: flex;
-    }
-        
+          
     &__item {
         @media screen and (max-width: 767px) {
             width: 100%;
@@ -20,26 +14,22 @@
                     margin-bottom: 30px;
                 }
         }
-        @media screen and (min-width: 768px) and (max-width: 1199px) {
-            width: 354px;
+        @include tablet {
+            flex-basis: calc(100% / 2 - 30px);
             margin: 15px;
         }
-        @media screen and (min-width: 1200px) {
-           margin-right: 30px;
+        @include desktop {
+            flex-basis: calc(100% / 4 - 30px);
         }
     }
 
     &__block {
         @include flex-settings(flex, center, center);
 
-            height: 120px;
-            margin-bottom: 30px;
-            border-radius: 4px;
-            background-color: #f5f4fa;
-        
-        @media screen and (min-width: 1200px) {
-            width: 270px;
-        }
+        height: 120px;
+        margin-bottom: 30px;
+        border-radius: 4px;
+        background-color: #f5f4fa;
     }
 
     &__title {

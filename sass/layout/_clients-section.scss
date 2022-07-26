@@ -2,61 +2,45 @@
   @extend %section;
 }
 
-.company-list {
-    
-    @media screen and (min-width: 480px) and (max-width: 767px) {
-        flex-basis: calc((100% - 2*15px) / 2);
-        display: flex;
-        flex-wrap: wrap;
-        margin: -15px;
+.section-title {
+  @extend %section-title;
+    @include desktop {
+        margin-bottom: 50px;
     }
-    @media screen and (max-width: 1199px) {
-        flex-basis: calc((100% - 4*15px) / 3);
-        display: flex;
-        flex-wrap: wrap;
-        margin: -15px;
-    }
-    @media screen and (min-width: 1200px) {
-        @include flex-settings (flex, flex-start, center);
-    }
-  
-  
-    &__item {
-      margin: 15px;
-      width: 100%;
-        @media screen and (min-width: 480px) {
-            width: 210px;
-        }
-        @media screen and (min-width: 768px) {
-            width: 226px;
-        }
-        @media screen and (min-width: 1200px) {
-            width: 170px;
-        }
-    }
+}
 
-    &__item:not(:last-child) {
-        @media screen and (min-width: 1200px) {
-            margin-right: 30px;
+.company-list {
+      @include list-settings(flex, wrap, -15px);
+
+    &__item {
+        margin: 15px;
+        width: calc(100% / 2 - 30px);
+
+        @include tablet {
+            width: calc(100% / 3 - 30px);
+        }
+        @include desktop {
+            width: calc(100% / 6 - 30px);
         }
     }
 
     &__link {
         @include flex-settings(flex, center, center);
         
-    height: 92px;
-        
-    @include border (1px, #afb1b8);
-    border-radius: 4px;
-    fill: #afb1b8;
+        height: 92px;
+            
+        @include border (1px, #afb1b8);
+        border-radius: 4px;
+        fill: #afb1b8;
 
-    transition: fill $transition-duration $timing-function,
-                border $transition-duration $timing-function;
+        transition: fill $transition-duration $timing-function,
+                    border $transition-duration $timing-function;
 
-        &:focus,
-        &:hover {
-        fill: $аccent-color;
-        @include border (1px, $аccent-color);
-        }
+          &:focus,
+          &:hover {
+             fill: $аccent-color;
+             @include border (1px, $аccent-color);
+          }
     }
 }
+

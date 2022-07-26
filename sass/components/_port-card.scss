@@ -1,15 +1,6 @@
 .product {
-  display: block;
 
-        @media  screen and (max-width: 767px ) {
-           width: 100%;
-        }
-        
-        @media  screen and (min-width: 768px ) and (max-width: 1199px) {
-            width: 354px;
-        }
-
-  transition: box-shadow $transition-duration $timing-function;
+    transition: box-shadow $transition-duration $timing-function;
     
     &:hover,
     &:focus {
@@ -53,7 +44,6 @@
     }
 
     &__thumb {
-        
         padding: 20px 24px;
         background-color: #ffffff;
         border-bottom: 1px solid #eeeeee;
@@ -68,23 +58,11 @@
 
         margin-bottom: 4px;
         color: $title-text-color;
-        
     }
 
     &__content {
         font-size: 16px;
         line-height: 1.88;
         color: $primary-text-color;
-    }
-
-    &__img {
-        display: flex;
-        @media  screen and (max-width: 767px ) {
-           width: 100%;
-        }
-        @media  screen and (min-width: 768px ) and (max-width: 1199px) {
-            width: 354px;
-        }
-        
     }
 }

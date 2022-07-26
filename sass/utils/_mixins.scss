@@ -7,6 +7,14 @@
   align-items: $align-items;
 }
 
+// list-flex --- flex + margin (display, flex, margin)
+
+@mixin list-settings($flex, $flex-wrap, $margin) {
+    display: $flex;
+    flex-wrap: $flex-wrap;
+    margin: $margin;
+}
+
 // social-link-value 
 
 @mixin social-link-value($fill) {
@@ -19,4 +27,22 @@
 
 @mixin border ($px, $color) {
     border: $px solid $color;
+}
+
+// break points
+
+@mixin mobile {
+    @media screen and (min-width:480px) {
+            @content;
+    }
+}
+@mixin  tablet {
+        @media screen and (min-width:768px) {
+            @content;
+    }
+}
+@mixin desktop {
+        @media screen and (min-width:1200px) {
+            @content;
+    }
 }

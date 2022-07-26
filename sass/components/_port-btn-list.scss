@@ -4,33 +4,29 @@
 
 .button-list {
 
-@media screen and (max-width: 767px) {
-    @include flex-settings(flex, flex-start, center);
-    flex-wrap: wrap;
-}
-@media screen and (min-width: 768px) {
-    @include flex-settings(flex, center, center);
-
-}
-  
-@media screen and (max-width: 1199px) {
-  margin-bottom: 40px;
-}
-@media screen and (min-width: 1200px) {
-    margin-bottom: 34px;
-}
-
-
+    @media screen and (max-width: 767px) {
+        @include flex-settings(flex, flex-start, center);
+        flex-wrap: wrap;
+    }
+    @include tablet {
+        @include flex-settings(flex, center, center);
+    }
+    
+    @media screen and (max-width: 1199px) {
+        margin-bottom: 40px;
+    }
+    @include desktop {
+        margin-bottom: 34px;
+    }
 
   &__item {
-    margin: 0 8px 15px 0;
+        margin: 0 8px 15px 0;
+    }
+    @include desktop {
+        &__item:not(:last-child) {
+        margin-right: 8px;
+    }
   }
-@media screen and (min-width: 1200px) {
-    &__item:not(:last-child) {
-    margin-right: 8px;
-  }
-
-}
  
   &__button {
     font-family: inherit;
@@ -52,8 +48,8 @@
     color: $title-text-color;
 
     transition: color $transition-duration $timing-function,
-      background-color $transition-duration $timing-function,
-      box-shadow $transition-duration $timing-function;
+                background-color $transition-duration $timing-function,
+                box-shadow $transition-duration $timing-function;
 
     &--active {
       background-color: $аccent-color;

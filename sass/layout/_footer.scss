@@ -4,55 +4,73 @@
 }
 
 .footer-link-group {
+  @media screen and (max-width: 767px) {
     text-align: center;
-//   @include flex-settings(flex, flex-start, baseline);
+  }
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    @include flex-settings(flex, center, baseline);
+    flex-wrap: wrap;
+    text-align: center;
+  } 
+  @include desktop {
+    @include flex-settings(flex, flex-start, baseline);
+  } 
 }
 
 .first-column {
-    margin-bottom: 60px;
 
-//   flex-direction: column;
-//   min-width: 231px;
-//   margin-right: 70px;
-  .logo--moves {
-    display: block;
-    margin-bottom: 20px;
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        margin-right: 165px;
+        margin-bottom: 60px;
+    } 
 
-    padding: 0;
-  }
-  .logo__text--inverse {
-    color: #ffffff;
-  }
+    @include desktop {
+        flex-direction: column;
+        min-width: 231px;
+        margin-right: 70px;
+    } 
 
-  &__link {
-    display: block;
-    color: $footer-link-color;
-    transition: color $transition-duration $timing-function;
-
-    &:hover,
-    &:focus {
-      color: $аccent-color;
+    .logo--moves {
+        display: block;
+        margin: 0;
+        margin-bottom: 20px;
+        padding: 0;
     }
-  }
-  &__link--repaints {
-    color: #ffffff;
-    &:hover,
-    &:focus {
-      color: #ffffff;
+    .logo__text--inverse {
+        color: #ffffff;
     }
-  }
 
-  &__item:not(:last-child) {
-    margin-bottom: 8px;
+    &__link {
+        display: block;
+        color: $footer-link-color;
+        transition: color $transition-duration $timing-function;
 
-    // margin-bottom: 9px;
-  }
+        &:hover,
+        &:focus {
+        color: $аccent-color;
+        }
+    }
+    &__link--repaints {
+        color: #ffffff;
+        &:hover,
+        &:focus {
+        color: #ffffff;
+        }
+    }
+
+    &__item:not(:last-child) {
+        margin-bottom: 8px;
+        @include desktop {
+            margin-bottom: 9px;
+        } 
+    }
 }
 
 .second-column {
     margin-bottom: 60px;
-
-//   margin-right: 93px;
+    @include desktop {
+        margin-right: 93px;
+    } 
 
   .column-title {
     display: block;
@@ -66,6 +84,7 @@
 
     margin-bottom: 20px;
   }
+  
   .socials-list {
     &__item--repaints {
       background-color: #43444d;

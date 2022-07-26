@@ -59,15 +59,20 @@
             </nav>
         </div>
     </header>
+
     <!--main -->
+
     <main>
+
         <!-- portfolio section -->
+
         <section class="portfolio-section">
             <div class="container">
 
                 <h1 class="visually-hidden"> Портфолио </h1>
 
                 <!-- button-list -->
+
                 <ul class="button-list">
                     <li class="button-list__item"><button type="button" class="button-list__button button-list__button--active"> Все </button></li>
                     <li class="button-list__item"><button type="button" class="button-list__button"> Веб-сайты </button></li>
@@ -83,7 +88,21 @@
                     <li class="card-set__item">
                         <a class="product" href="#">
                             <div class="product__overlay">
-                                <img class="product__img" src="./images/portfolio/img-10.jpg" alt="на ноутбуке изображены три IT-специалиста" width="370" height="294" >
+                                <picture>
+                                    <source srcset="./images/portfolio/img-1-370.webp 1x, ./images/portfolio/img-1-740.webp 2x" 
+                                        media="(min-width: 1200px)" type="image/webp">
+                                    <source srcset="./images/portfolio/img-1-354.webp 1x, ./images/portfolio/img-1-708.webp 2x" 
+                                        media="(min-width: 768px)" type="image/webp">
+                                    <source srcset="./images/portfolio/img-1-450.webp 1x, ./images/portfolio/img-1-900.webp 2x"
+                                        media="(min-width: 320px)" type="image/webp">
+                                    
+                                    <source srcset="./images/portfolio/img-1-370.jpg 1x, ./images/portfolio/img-1-740.jpg 2x" media="(min-width: 1200px)">
+                                    <source srcset="./images/portfolio/img-1-354.jpg 1x, ./images/portfolio/img-1-708.jpg 2x" media="(min-width: 768px)">
+                                    <source srcset="./images/portfolio/img-1-450.jpg 1x, ./images/portfolio/img-1-900.jpg 2x" media="(min-width: 320px)">
+                                    
+                                    <img class="product__img" src="./images/portfolio/img-1-354.jpg " alt=" на ноутбуке изображены три IT-специалиста" />
+                                </picture>
+
                                     <p class="product__text">Ресурс предлагает комплексные предложения с разным
                                     уровнем функционала и сервисов. Все
                                     это позволит посетителю получить
@@ -93,12 +112,30 @@
                                 <h2 class="product__title">Технокряк </h2>
                                 <p class="product__content">Веб-сайт</p>
                             </div>
-                        </a> </li>
+                        </a> 
+                    </li>
 
                     <li class="card-set__item">
                         <a href="#" class="product">
                             <div class="product__overlay">
-                                <img class="product__img" src="./images/portfolio/img-11.jpg" alt="два играка в баскетбол в прижке" width="370" height="294" >
+                                <picture>
+                                    <source srcset="./images/portfolio/img-2-370.webp 1x, ./images/portfolio/img-2-740.webp 2x"
+                                        media="(min-width: 1200px)" type="image/webp">
+                                    <source srcset="./images/portfolio/img-2-354.webp 1x, ./images/portfolio/img-2-708.webp 2x"
+                                        media="(min-width: 768px)" type="image/webp">
+                                    <source srcset="./images/portfolio/img-2-450.webp 1x, ./images/portfolio/img-2-900.webp 2x"
+                                        media="(min-width: 320px)" type="image/webp">
+                                
+                                    <source srcset="./images/portfolio/img-2-370.jpg 1x, ./images/portfolio/img-2-740.jpg 2x"
+                                        media="(min-width: 1200px)">
+                                    <source srcset="./images/portfolio/img-2-354.jpg 1x, ./images/portfolio/img-2-708.jpg 2x"
+                                        media="(min-width: 768px)">
+                                    <source srcset="./images/portfolio/img-2-450.jpg 1x, ./images/portfolio/img-2-900.jpg 2x"
+                                        media="(min-width: 320px)">
+                                
+                                    <img class="product__img" src="./images/portfolio/img-2-354.jpg " alt=" два играка в баскетбол в прижке" />
+                                </picture>
+                                
                                     <p class="product__text">Ресурс предлагает комплексные предложения с разным уровнем
                                         функционала и сервисов. Все
                                         это позволит посетителю получить
@@ -114,22 +151,55 @@
 
             <li class="card-set__item"><a href="#" class="product">
                     <div class="product__overlay">
-                        <img class="product__img" src="./images/portfolio/img-12.jpg"
-                        alt="эмблема ресторана морепродукты" width="370" height="294" >
-                    <p class="product__text">Ресурс предлагает комплексные предложения с разным уровнем
-                        функционала и сервисов. Все
-                        это позволит посетителю получить
-                        исчерпывающие сведения <br> о компании или частном лице.</p>
+                        <picture>
+                            <source srcset="./images/portfolio/img-3-370.webp 1x, ./images/portfolio/img-3-740.webp 2x"
+                                media="(min-width: 1200px)" type="image/webp">
+                            <source srcset="./images/portfolio/img-3-354.webp 1x, ./images/portfolio/img-3-708.webp 2x"
+                                media="(min-width: 768px)" type="image/webp">
+                            <source srcset="./images/portfolio/img-3-450.webp 1x, ./images/portfolio/img-3-900.webp 2x"
+                                media="(min-width: 320px)" type="image/webp">
+                        
+                            <source srcset="./images/portfolio/img-3-370.jpg 1x, ./images/portfolio/img-3-740.jpg 2x"
+                                media="(min-width: 1200px)">
+                            <source srcset="./images/portfolio/img-3-354.jpg 1x, ./images/portfolio/img-3-708.jpg 2x"
+                                media="(min-width: 768px)">
+                            <source srcset="./images/portfolio/img-3-450.jpg 1x, ./images/portfolio/img-3-900.jpg 2x"
+                                media="(min-width: 320px)">
+                        
+                            <img class="product__img" src="./images/portfolio/img-3-354.jpg " alt="эмблема ресторана морепродукты" />
+                        </picture>
+
+                            <p class="product__text">Ресурс предлагает комплексные предложения с разным уровнем
+                                функционала и сервисов. Все
+                                это позволит посетителю получить
+                                исчерпывающие сведения <br> о компании или частном лице.</p>
                     </div>
                     <div class="product__thumb">
                         <h2 class="product__title">Ресторан Seafood </h2>
                         <p class="product__content"> Приложение</p>
                     </div>
-                </a> </li>
+                </a>
+             </li>
             <li class="card-set__item"><a href="#" class="product">
                     <div class="product__overlay">
-                        <img class="product__img" src="./images/portfolio/img-13.jpg" alt="наушники" width="370"
-                        height="294" >
+                        <picture>
+                            <source srcset="./images/portfolio/img-4-370.webp 1x, ./images/portfolio/img-4-740.webp 2x"
+                                media="(min-width: 1200px)" type="image/webp">
+                            <source srcset="./images/portfolio/img-4-354.webp 1x, ./images/portfolio/img-4-708.webp 2x"
+                                media="(min-width: 768px)" type="image/webp">
+                            <source srcset="./images/portfolio/img-4-450.webp 1x, ./images/portfolio/img-4-900.webp 2x"
+                                media="(min-width: 320px)" type="image/webp">
+                        
+                            <source srcset="./images/portfolio/img-4-370.jpg 1x, ./images/portfolio/img-4-740.jpg 2x"
+                                media="(min-width: 1200px)">
+                            <source srcset="./images/portfolio/img-4-354.jpg 1x, ./images/portfolio/img-4-708.jpg 2x"
+                                media="(min-width: 768px)">
+                            <source srcset="./images/portfolio/img-4-450.jpg 1x, ./images/portfolio/img-4-900.jpg 2x"
+                                media="(min-width: 320px)">
+                        
+                            <img class="product__img" src="./images/portfolio/img-4-354.jpg " alt=" наушники" />
+                        </picture>
+                        
                     <p class="product__text">Ресурс предлагает комплексные предложения с разным уровнем
                         функционала и сервисов. Все
                         это позволит посетителю получить
@@ -142,8 +212,24 @@
                 </a> </li>
             <li class="card-set__item"><a href="#" class="product">
                     <div class="product__overlay">
-                        <img class="product__img" src="./images/portfolio/img-14.jpg" alt="две картоные коробочки"
-                        width="370" height="294" >
+                        <picture>
+                            <source srcset="./images/portfolio/img-5-370.webp 1x, ./images/portfolio/img-5-740.webp 2x"
+                                media="(min-width: 1200px)" type="image/webp">
+                            <source srcset="./images/portfolio/img-5-354.webp 1x, ./images/portfolio/img-5-708.webp 2x"
+                                media="(min-width: 768px)" type="image/webp">
+                            <source srcset="./images/portfolio/img-5-450.webp 1x, ./images/portfolio/img-5-900.webp 2x"
+                                media="(min-width: 320px)" type="image/webp">
+                        
+                            <source srcset="./images/portfolio/img-5-370.jpg 1x, ./images/portfolio/img-5-740.jpg 2x"
+                                media="(min-width: 1200px)">
+                            <source srcset="./images/portfolio/img-5-354.jpg 1x, ./images/portfolio/img-5-708.jpg 2x"
+                                media="(min-width: 768px)">
+                            <source srcset="./images/portfolio/img-5-450.jpg 1x, ./images/portfolio/img-5-900.jpg 2x"
+                                media="(min-width: 320px)">
+                        
+                            <img class="product__img" src="./images/portfolio/img-5-354.jpg " alt=" две картоные коробочки" />
+                        </picture>
+                        
                     <p class="product__text">Ресурс предлагает комплексные предложения с разным уровнем
                         функционала и сервисов. Все
                         это позволит посетителю получить
@@ -156,8 +242,24 @@
                 </a></li>
             <li class="card-set__item"><a href="#" class="product">
                     <div class="product__overlay">
-                        <img class="product__img" src="./images/portfolio/img-15.jpg" alt="монитор" width="370"
-                        height="294" >
+                        <picture>
+                            <source srcset="./images/portfolio/img-6-370.webp 1x, ./images/portfolio/img-6-740.webp 2x"
+                                media="(min-width: 1200px)" type="image/webp">
+                            <source srcset="./images/portfolio/img-6-354.webp 1x, ./images/portfolio/img-6-708.webp 2x"
+                                media="(min-width: 768px)" type="image/webp">
+                            <source srcset="./images/portfolio/img-6-450.webp 1x, ./images/portfolio/img-6-900.webp 2x"
+                                media="(min-width: 320px)" type="image/webp">
+                        
+                            <source srcset="./images/portfolio/img-6-370.jpg 1x, ./images/portfolio/img-6-740.jpg 2x"
+                                media="(min-width: 1200px)">
+                            <source srcset="./images/portfolio/img-6-354.jpg 1x, ./images/portfolio/img-6-708.jpg 2x"
+                                media="(min-width: 768px)">
+                            <source srcset="./images/portfolio/img-6-450.jpg 1x, ./images/portfolio/img-6-900.jpg 2x"
+                                media="(min-width: 320px)">
+                        
+                            <img class="product__img" src="./images/portfolio/img-6-354.jpg " alt=" монитор" />
+                        </picture>
+                        
                     <p class="product__text">Ресурс предлагает комплексные предложения с разным уровнем
                         функционала и сервисов. Все
                         это позволит посетителю получить
@@ -170,8 +272,24 @@
                 </a></li>
             <li class="card-set__item"><a href="#" class="product">
                     <div class="product__overlay">
-                        <img class="product__img" src="./images/portfolio/img-16.jpg" alt="открытая книга"
-                        width="370" height="294" >
+                        <picture>
+                            <source srcset="./images/portfolio/img-7-370.webp 1x, ./images/portfolio/img-7-740.webp 2x"
+                                media="(min-width: 1200px)" type="image/webp">
+                            <source srcset="./images/portfolio/img-7-354.webp 1x, ./images/portfolio/img-7-708.webp 2x"
+                                media="(min-width: 768px)" type="image/webp">
+                            <source srcset="./images/portfolio/img-7-450.webp 1x, ./images/portfolio/img-7-900.webp 2x"
+                                media="(min-width: 320px)" type="image/webp">
+                        
+                            <source srcset="./images/portfolio/img-7-370.jpg 1x, ./images/portfolio/img-7-740.jpg 2x"
+                                media="(min-width: 1200px)">
+                            <source srcset="./images/portfolio/img-7-354.jpg 1x, ./images/portfolio/img-7-708.jpg 2x"
+                                media="(min-width: 768px)">
+                            <source srcset="./images/portfolio/img-7-450.jpg 1x, ./images/portfolio/img-7-900.jpg 2x"
+                                media="(min-width: 320px)">
+                        
+                            <img class="product__img" src="./images/portfolio/img-7-354.jpg " alt=" открытая книга" />
+                        </picture>
+                    
                     <p class="product__text">Ресурс предлагает комплексные предложения с разным уровнем
                         функционала и сервисов. Все
                         это позволит посетителю получить
@@ -184,8 +302,24 @@
                 </a> </li>
             <li class="card-set__item"><a href="#" class="product">
                     <div class="product__overlay">
-                        <img class="product__img" src="./images/portfolio/img-17.jpg" alt="логотип проекта лаб"
-                        width="370" height="294" >
+                        <picture>
+                            <source srcset="./images/portfolio/img-8-370.webp 1x, ./images/portfolio/img-8-740.webp 2x"
+                                media="(min-width: 1200px)" type="image/webp">
+                            <source srcset="./images/portfolio/img-8-354.webp 1x, ./images/portfolio/img-8-708.webp 2x"
+                                media="(min-width: 768px)" type="image/webp">
+                            <source srcset="./images/portfolio/img-8-450.webp 1x, ./images/portfolio/img-8-900.webp 2x"
+                                media="(min-width: 320px)" type="image/webp">
+                        
+                            <source srcset="./images/portfolio/img-8-370.jpg 1x, ./images/portfolio/img-8-740.jpg 2x"
+                                media="(min-width: 1200px)">
+                            <source srcset="./images/portfolio/img-8-354.jpg 1x, ./images/portfolio/img-8-708.jpg 2x"
+                                media="(min-width: 768px)">
+                            <source srcset="./images/portfolio/img-8-450.jpg 1x, ./images/portfolio/img-8-900.jpg 2x"
+                                media="(min-width: 320px)">
+                        
+                            <img class="product__img" src="./images/portfolio/img-8-354.jpg " alt=" логотип проекта лаб" />
+                        </picture>
+                        
                     <p class="product__text">Ресурс предлагает комплексные предложения с разным уровнем
                         функционала и сервисов. Все
                         это позволит посетителю получить
@@ -199,8 +333,24 @@
             <li class="card-set__item">
                 <a href="#" class="product">
                     <div class="product__overlay">
-                        <img class="product__img" src="./images/portfolio/img-18.jpg" alt="человек печатающий на ноутбуке" width="370"
-                            height="294" >
+                        <picture>
+                            <source srcset="./images/portfolio/img-9-370.webp 1x, ./images/portfolio/img-9-740.webp 2x"
+                                media="(min-width: 1200px)" type="image/webp">
+                            <source srcset="./images/portfolio/img-9-354.webp 1x, ./images/portfolio/img-9-708.webp 2x"
+                                media="(min-width: 768px)" type="image/webp">
+                            <source srcset="./images/portfolio/img-9-450.webp 1x, ./images/portfolio/img-9-900.webp 2x"
+                                media="(min-width: 320px)" type="image/webp">
+                        
+                            <source srcset="./images/portfolio/img-9-370.jpg 1x, ./images/portfolio/img-9-740.jpg 2x"
+                                media="(min-width: 1200px)">
+                            <source srcset="./images/portfolio/img-9-354.jpg 1x, ./images/portfolio/img-9-708.jpg 2x"
+                                media="(min-width: 768px)">
+                            <source srcset="./images/portfolio/img-9-450.jpg 1x, ./images/portfolio/img-9-900.jpg 2x"
+                                media="(min-width: 320px)">
+                        
+                            <img class="product__img" src="./images/portfolio/img-9-354.jpg " alt=" человек печатающий на ноутбуке" />
+                        </picture>
+                        
                         <p class="product__text">Ресурс предлагает комплексные предложения с разным уровнем
                             функционала и сервисов. Все
                             это позволит посетителю получить
@@ -289,6 +439,7 @@
             </div>
         </div>
     </footer>
+
+    <script src="./js/mobile-menu.js"></script>
 </body>
-<script src="./js/mobile-menu.js"></script>
 </html>

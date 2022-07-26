@@ -1,24 +1,24 @@
 
 .logo {
-  font-family: $f-family-logo;
+    font-family: $f-family-logo;
   
-  font-weight: $f-weight-bolt;
-  font-size: 24px;
-  line-height: 1.17;
-  color: $аccent-color;
+    font-weight: $f-weight-bolt;
+    font-size: 24px;
+    line-height: 1.17;
+    color: $аccent-color;
 
-  padding: 16px 0;
+    padding: 16px 0;
 
-  &__text {
-    color: $title-text-color;
-}
- @media screen and (min-width: 768px) {
-    font-size: 26px;
-    line-height: 1.19;
-    margin-right: 88px;
- }
- @media screen and (min-width: 1200px) {
-    margin-right: 93px;
- }
+    &__text {
+      color: $title-text-color;
+    }
+    @include tablet {
+      font-size: 26px;
+      line-height: 1.19;
+       margin-right: 88px;
+    }
+    @include desktop {
+      margin-right: 93px;
+    }
  
 }

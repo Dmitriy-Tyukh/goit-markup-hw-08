@@ -1,36 +1,71 @@
 .hero-section {
     @extend %section;
+
+    text-align: center;
+    margin: 0 auto;
+    padding: 118px 0;
     
-  padding: 200px 0;
-  text-align: center;
-  background-color: #2f303a;
+    max-width: 1600px;
+    
+    background-color: #2f303a;
+    background-image: 
+        linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url('../images/hero/hero-mob-1x.jpg');
+    
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    
+    @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            background-image: url('../images/hero/hero-mob-2x.jpg');
+        
+    }
 
-//   max-width: 1600px;
-  min-height: 600px;
-  margin: 0 auto;
+    @include tablet {
+        background-image: url('../images/hero/hero-tab-1x.jpg');
 
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-    url('../images/Img-background.jpg');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+        @media (min-device-pixel-ratio: 2),
+        (-webkit-min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            background-image: url('../images/hero/hero-tab-2x.jpg');
+        }
+    }
 
+    @include desktop {
+        padding-top: 200px;
+        padding-bottom: 200px;
+            background-image: url('../images/hero/hero-desk-1x.jpg');
+
+        @media (min-device-pixel-ratio: 2),
+        (-webkit-min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            background-image: url('../images/hero/hero-desk-2x.jpg');
+        }
+    }
 
     &__title {
+        max-width: 360px;
+
         margin: 0 auto 30px;
+
         font-weight: $f-weight-black;
         font-size: 26px;
         line-height: 1.62;
         letter-spacing: 0.06em;
         text-transform: uppercase;
-        width: 100%;
+        
         color: #ffffff;
         
-        // font-size: 44px;
-        // line-height: 1.36;
-
+        @include desktop {
+            max-width: 696px;
+            font-size: 44px;
+            line-height: 1.36;
+        }
     }
-
     &__button {
         @extend %button ;
     }

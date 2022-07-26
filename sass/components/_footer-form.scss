@@ -1,29 +1,41 @@
 
 .form-footer {
-//   @include flex-settings(flex, flex-start, flex-end);
-  
-  &__title {
+
+    @media screen and (max-width: 1199px) {
+        text-align: center;
+    }
+    @include desktop {
+    @include flex-settings(flex, flex-start, flex-end);
+    } 
+
+    &__title {
         font-weight: $f-weight-bolt;
         font-size: 14px;
         line-height: 1.14;
         
-
-        // margin-right: 12px;
-
+        @include desktop {
+           margin-right: 12px;
+        } 
+        
         text-transform: uppercase;
         color: #ffffff;
     }
 
     &__input {
         @include flex-settings(flex, flex-start, center);
-
         width: 100%;
-
-        // width: 358px;
+        @include mobile {
+            width: 450px;
+        }
+        @include desktop {
+            width: 358px;
+            margin-bottom: 0;
+        }
+                
         padding: 15px;
         margin-top: 20px; 
         margin-bottom: 20px; 
-        
+
         font-size: 16px;
         line-height: 1.25;
 
