@@ -396,6 +396,10 @@ body.modal-open {
   overflow: hidden;
 }
 
+body.menu-open {
+  overflow: hidden;
+}
+
 .section {
   padding-top: 60px;
   padding-bottom: 60px;
@@ -515,10 +519,12 @@ body.modal-open {
   background-color: #ffffff;
   display: none;
   width: 100%;
+  height: 100%;
 }
 @media screen and (max-width: 767px) {
   .menu-container {
-    position: absolute;
+    position: fixed;
+    overflow: auto;
     top: 0;
     left: 0;
     z-index: 2;
@@ -661,21 +667,22 @@ body.modal-open {
 .auth-nav__link {
   -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  font-weight: 500;
+  letter-spacing: 0.02em;
 }
-@media screen and (max-width: 767px) {
-  .auth-nav__link {
-    font-weight: 500;
-    letter-spacing: 0.02em;
-  }
+.auth-nav__link--mobile-mail {
+  font-size: 24px;
+  line-height: 1.17;
+  color: rgb(117, 117, 117);
+}
+.auth-nav__link--mobile-tel {
+  font-size: 26px;
+  line-height: 1.18;
+  color: rgb(33, 150, 243);
+}
+@media screen and (min-width: 380px) {
   .auth-nav__link--mobile-tel {
     font-size: 34px;
-    line-height: 1.18;
-    color: rgb(33, 150, 243);
-  }
-  .auth-nav__link--mobile-mail {
-    font-size: 24px;
-    line-height: 1.17;
-    color: rgb(117, 117, 117);
   }
 }
 @media screen and (min-width: 768px) {
@@ -709,6 +716,7 @@ body.modal-open {
             align-items: center;
     padding: 16px 0;
     font-weight: 500;
+    font-size: 14px;
     line-height: 1.14;
     color: rgb(117, 117, 117);
   }
@@ -766,10 +774,15 @@ body.modal-open {
 }
 .social-nav__link {
   font-weight: 500;
-  font-size: 18px;
+  font-size: calc(9px + 1.875vw);
   line-height: 1.22;
   letter-spacing: 0.02em;
   color: rgb(33, 150, 243);
+}
+@media screen and (max-width: 479px) {
+  .social-nav__link {
+    font-size: calc(9px + 15.3 * (100vw - 320px) / 480);
+  }
 }
 
 .socials-list {
@@ -1378,29 +1391,34 @@ body.modal-open {
 }
 @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .hero-section {
-    background-image: url("../images/hero/hero-mob-2x.jpg");
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/hero/hero-mob-2x.jpg");
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/hero-mob-2x.jpg");
   }
 }
 @media screen and (min-width: 768px) {
   .hero-section {
-    background-image: url("../images/hero/hero-tab-1x.jpg");
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/hero/hero-tab-1x.jpg");
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/hero-tab-1x.jpg");
   }
 }
 @media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
   .hero-section {
-    background-image: url("../images/hero/hero-tab-2x.jpg");
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/hero/hero-tab-2x.jpg");
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/hero-tab-2x.jpg");
   }
 }
 @media screen and (min-width: 1200px) {
   .hero-section {
     padding-top: 200px;
     padding-bottom: 200px;
-    background-image: url("../images/hero/hero-desk-1x.jpg");
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/hero/hero-desk-1x.jpg");
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/hero-desk-1x.jpg");
   }
 }
 @media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
   .hero-section {
-    background-image: url("../images/hero/hero-desk-2x.jpg");
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/hero/hero-desk-2x.jpg");
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/hero-desk-2x.jpg");
   }
 }
 .hero-section__title {
@@ -1511,6 +1529,9 @@ body.modal-open {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
   width: 100%;
   height: 70px;
   bottom: 0;
@@ -1518,7 +1539,7 @@ body.modal-open {
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
-  background: rgba(47, 48, 58, 0.8);
+  background-color: rgba(47, 48, 58, 0.8);
   color: #ffffff;
 }
 .work-list__thumb {
@@ -1667,6 +1688,8 @@ body.modal-open {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     text-align: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1683,9 +1706,8 @@ body.modal-open {
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1199px) {
+@media screen and (max-width: 1199px) {
   .first-column {
-    margin-right: 165px;
     margin-bottom: 60px;
   }
 }
@@ -1732,8 +1754,10 @@ body.modal-open {
   }
 }
 
-.second-column {
-  margin-bottom: 60px;
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .second-column {
+    margin-bottom: 60px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .second-column {

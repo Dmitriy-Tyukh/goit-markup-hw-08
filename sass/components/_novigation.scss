@@ -12,7 +12,6 @@
     right: 15px;
     z-index: 3;
 
-
     @include flex-settings(flex, center, center);
     padding: 0;
     border: none;
@@ -39,9 +38,12 @@
     background-color: #ffffff;
     display: none;
     width: 100%;
+    height: 100%;
 
     @media screen and (max-width: 767px) {
-        position: absolute;
+        position: fixed;
+        overflow: auto;
+        
         top: 0;
         left: 0;
         z-index: 2;
@@ -160,24 +162,29 @@
     }
 
     &__link {
-    transition: color $transition-duration $timing-function;
 
-        @media screen and (max-width:767px) {
-          font-weight: $f-weight-medium;
-          letter-spacing: 0.02em;
+        transition: color $transition-duration $timing-function;
+        font-weight: $f-weight-medium;
+        letter-spacing: 0.02em;
 
-            &--mobile-tel {
-                font-size: 34px;
-                line-height: 1.18;
-                color: $аccent-color;
-            }
-            &--mobile-mail {
+    &--mobile-mail {
                 font-size: 24px;
                 line-height: 1.17;
                 color: $primary-text-color;
             }
+    &--mobile-tel {
+                font-size: 26px;
+                line-height: 1.18;
+                color: $аccent-color;
+            }
+
+        @media screen and (min-width: 380px) {
+            &--mobile-tel {
+                font-size: 34px;
+            }
+            
         }
-    
+
     @include tablet {
         @include flex-settings (flex, flex-start, center);
 
@@ -193,6 +200,7 @@
 
         padding: 16px 0;
         font-weight: $f-weight-medium;
+        font-size: 14px;
         line-height: 1.14;
         color: $primary-text-color;
 
@@ -255,9 +263,13 @@
 
   &__link {
     font-weight: $f-weight-medium;
-    font-size: 18px;
+    font-size: calc(9px + 9 * (100vw / 480));
     line-height: 1.22;
     letter-spacing: 0.02em;
     color: $аccent-color;
+
+    @media screen and (max-width: 479px) {
+        font-size: calc(9px + (9 + 9 * 0.7) * ((100vw - 320px) / 480));;
+    }
   }
 }

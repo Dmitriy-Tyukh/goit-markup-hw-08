@@ -7,20 +7,21 @@
   @media screen and (max-width: 767px) {
     text-align: center;
   }
+
   @media screen and (min-width: 768px) and (max-width: 1199px) {
     @include flex-settings(flex, center, baseline);
     flex-wrap: wrap;
     text-align: center;
+    justify-content: space-around;
   } 
+
   @include desktop {
     @include flex-settings(flex, flex-start, baseline);
   } 
 }
 
 .first-column {
-
-    @media screen and (min-width: 768px) and (max-width: 1199px) {
-        margin-right: 165px;
+    @media screen and (max-width: 1199px) {
         margin-bottom: 60px;
     } 
 
@@ -67,7 +68,10 @@
 }
 
 .second-column {
-    margin-bottom: 60px;
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+       margin-bottom: 60px;
+    } 
+   
     @include desktop {
         margin-right: 93px;
     } 
